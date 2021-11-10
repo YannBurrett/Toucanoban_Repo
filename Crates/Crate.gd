@@ -1,5 +1,5 @@
 extends "res://Templates/Moveable.gd"
-
+tool
 signal blocked
 
 func _ready():
@@ -21,3 +21,9 @@ func move(direction:Vector2):
 		$Tween.start()
 	else:
 		emit_signal("blocked")
+
+func _get_configuration_warning():
+	if get_parent().name != "Crates":
+		return "Must be a child of the Crates node"
+		
+	return ""
