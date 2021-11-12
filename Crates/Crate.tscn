@@ -19,6 +19,22 @@ shape = SubResource( 1 )
 [node name="Sprite" parent="." index="1"]
 texture = ExtResource( 2 )
 
+[node name="RayUp" parent="." index="2"]
+collision_mask = 5
+collide_with_areas = true
+
+[node name="RayRight" parent="." index="3"]
+collision_mask = 5
+collide_with_areas = true
+
+[node name="RayDown" parent="." index="4"]
+collision_mask = 5
+collide_with_areas = true
+
+[node name="RayLeft" parent="." index="5"]
+collision_mask = 5
+collide_with_areas = true
+
 [node name="Light2D" type="Light2D" parent="." index="7"]
 texture = ExtResource( 4 )
 color = Color( 0.886275, 0.631373, 0.188235, 1 )
