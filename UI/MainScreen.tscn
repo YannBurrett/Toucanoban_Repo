@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/Toucanoban.theme" type="Theme" id=1]
 [ext_resource path="res://Sprites/canopy_icon_white.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://UI/UI_Textures/HowTo.png" type="Texture" id=8]
 [ext_resource path="res://UI/MainScreen.gd" type="Script" id=9]
 [ext_resource path="res://UI/HowToPlay.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/Options.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -171,6 +172,8 @@ text = "Quit"
 align = 1
 
 [node name="HowToPlay" parent="." instance=ExtResource( 10 )]
+
+[node name="Options" parent="." instance=ExtResource( 11 )]
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonNewGame" to="." method="_on_ButtonNewGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonContinue" to="." method="_on_ButtonContinue_pressed"]
