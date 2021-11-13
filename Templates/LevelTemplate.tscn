@@ -74,4 +74,9 @@ position = Vector2( 224, 160 )
 [node name="Crate" parent="Crates" instance=ExtResource( 4 )]
 position = Vector2( 160, 160 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 544, 288 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
 [connection signal="victory" from="Goals" to="." method="_on_Goals_victory"]
