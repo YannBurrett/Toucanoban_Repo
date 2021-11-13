@@ -14,6 +14,8 @@ func _unhandled_input(event):
 		move(Vector2.DOWN)
 	elif event.is_action_pressed("Left"):
 		move(Vector2.LEFT)
+	elif event.is_action_pressed("Restart"):
+		get_tree().reload_current_scene()
 
 
 func blocked():

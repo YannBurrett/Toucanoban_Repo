@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://UI/Toucanoban.theme" type="Theme" id=1]
 [ext_resource path="res://Sprites/canopy_icon_white.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://UI/UI_Textures/Quit.png" type="Texture" id=6]
 [ext_resource path="res://UI/UI_Textures/Play.png" type="Texture" id=7]
 [ext_resource path="res://UI/UI_Textures/HowTo.png" type="Texture" id=8]
+[ext_resource path="res://UI/MainScreen.gd" type="Script" id=9]
+[ext_resource path="res://UI/HowToPlay.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -21,6 +23,7 @@ font_data = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -166,3 +169,11 @@ margin_right = 276.0
 margin_bottom = 374.0
 text = "Quit"
 align = 1
+
+[node name="HowToPlay" parent="." instance=ExtResource( 10 )]
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonNewGame" to="." method="_on_ButtonNewGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonContinue" to="." method="_on_ButtonContinue_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonOptions" to="." method="_on_ButtonOptions_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonHowToPlay" to="." method="_on_ButtonHowToPlay_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]

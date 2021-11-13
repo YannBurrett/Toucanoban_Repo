@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UI_Textures/HowToPlay.png" type="Texture" id=1]
+[ext_resource path="res://UI/HowToPlay.gd" type="Script" id=2]
+
+[node name="HowToPlay" type="Popup"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 648, 480 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 648.0
+margin_bottom = 480.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer"]
+margin_left = 4.0
+margin_right = 644.0
+margin_bottom = 480.0
+texture = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 484.0
+margin_right = 648.0
+margin_bottom = 532.0
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 289.0
+margin_right = 337.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 341.0
+margin_top = 17.0
+margin_right = 359.0
+margin_bottom = 31.0
+text = "Ok"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
