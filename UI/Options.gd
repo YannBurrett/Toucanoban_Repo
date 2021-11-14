@@ -1,5 +1,16 @@
 extends Popup
 
+onready var VolumeSlider = $Panel/VBoxContainer/SliderMusic
+onready var VolumeSFX = $Panel/VBoxContainer/SliderSFX
+onready var Mute = $Panel/VBoxContainer/CenterContainer/GridContainer/ButtonMute
+onready var FullScreenButton = $Panel/VBoxContainer/CenterContainer/GridContainer/ButtonFullScreen
+
+
+func update_GUI():
+	VolumeSlider.value = Gamestate.Music_volume
+	VolumeSFX.value = Gamestate.SFX_volume
+	Mute.pressed = Gamestate.Music_Mute
+	FullScreenButton.pressed = Gamestate.fullscreen
 
 
 func _on_SliderMusic_value_changed(value):

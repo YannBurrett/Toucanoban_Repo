@@ -174,7 +174,6 @@ align = 1
 [node name="HowToPlay" parent="." instance=ExtResource( 10 )]
 
 [node name="Options" parent="." instance=ExtResource( 11 )]
-visible = false
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonNewGame" to="." method="_on_ButtonNewGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/PanelContainer/CenterContainer/GridContainer/ButtonContinue" to="." method="_on_ButtonContinue_pressed"]
