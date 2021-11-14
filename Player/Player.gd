@@ -36,4 +36,5 @@ func move(direction:Vector2):
 				Tween.EASE_OUT_IN, 0)
 		$Tween.start()
 		$PlayerSound.play_sound()
+	$Sprite.flip_h = (direction.normalized() == Vector2.LEFT)
 

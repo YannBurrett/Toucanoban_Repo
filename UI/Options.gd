@@ -4,7 +4,9 @@ onready var VolumeSlider = $Panel/VBoxContainer/SliderMusic
 onready var VolumeSFX = $Panel/VBoxContainer/SliderSFX
 onready var Mute = $Panel/VBoxContainer/CenterContainer/GridContainer/ButtonMute
 onready var FullScreenButton = $Panel/VBoxContainer/CenterContainer/GridContainer/ButtonFullScreen
+onready var ButtonDone = $Panel/VBoxContainer/CenterContainer/GridContainer/ButtonLabel
 
+var ButtonText = "Done!" setget update_ButtonText
 
 func update_GUI():
 	VolumeSlider.value = Gamestate.Music_volume
@@ -30,4 +32,15 @@ func _on_ButtonFullScreen_toggled(button_pressed):
 
 
 func _on_ButtonDone_pressed():
-	hide()
+	if ButtonDone.text == "Done!":
+		hide()
+	else:
+		get_tree().change_scene("res://UI/MainScreen.tscn")
+
+func update_ButtonText(text:String):
+	ButtonDone.text = text
+
+
+
+
+

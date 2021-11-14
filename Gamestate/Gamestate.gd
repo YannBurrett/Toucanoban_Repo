@@ -38,7 +38,8 @@ func _ready():
 	SFX_volume = settings["audio"]["SFXVolume"]
 	fullscreen = settings["video"]["fullscreen"]
 	current_level = settings["level"]["current_level"]
-	
+	if not Music_Mute:
+		Music.play()
 
 	get_tree().call_group("GUI", "update_GUI")
 
@@ -110,7 +111,7 @@ func set_fullscreen(f_screen:bool):
 
 func set_level(new_level):
 	current_level = new_level
-	settings["levels"]["current_level"] = current_level
+	settings["level"]["current_level"] = current_level
 	save_settings()
 
 

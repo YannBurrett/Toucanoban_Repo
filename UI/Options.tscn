@@ -13,7 +13,6 @@ use_filter = true
 font_data = ExtResource( 2 )
 
 [node name="Options" type="Popup" groups=["GUI"]]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 320, 400 )
@@ -118,7 +117,7 @@ margin_top = 96.0
 margin_right = 64.0
 margin_bottom = 140.0
 
-[node name="Label3" type="Label" parent="Panel/VBoxContainer/CenterContainer/GridContainer"]
+[node name="ButtonLabel" type="Label" parent="Panel/VBoxContainer/CenterContainer/GridContainer"]
 margin_left = 68.0
 margin_top = 96.0
 margin_right = 254.0
