@@ -1,8 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Templates/Moveable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/canopy_icon_white.png" type="Texture" id=2]
 [ext_resource path="res://Player/Player.gd" type="Script" id=3]
+[ext_resource path="res://Player/PlayerSound.gd" type="Script" id=4]
+[ext_resource path="res://SFX/Move.wav" type="AudioStream" id=5]
+[ext_resource path="res://SFX/Move3.wav" type="AudioStream" id=6]
+[ext_resource path="res://SFX/Move2.wav" type="AudioStream" id=7]
+[ext_resource path="res://SFX/Move5.wav" type="AudioStream" id=8]
+[ext_resource path="res://SFX/Move4.wav" type="AudioStream" id=9]
+[ext_resource path="res://SFX/Move7.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -23,3 +30,8 @@ texture = ExtResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="7"]
 occluder = SubResource( 1 )
+
+[node name="PlayerSound" type="AudioStreamPlayer" parent="." index="8"]
+bus = "SFX"
+script = ExtResource( 4 )
+sounds = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 5 ) ]

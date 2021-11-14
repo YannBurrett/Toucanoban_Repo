@@ -35,4 +35,5 @@ func move(direction:Vector2):
 				position + direction, speed,Tween.TRANS_LINEAR, 
 				Tween.EASE_OUT_IN, 0)
 		$Tween.start()
+		$PlayerSound.play_sound()
 

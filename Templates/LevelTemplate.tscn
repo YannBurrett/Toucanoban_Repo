@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprites/Wall.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Floor.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Templates/LevelTemplate.gd" type="Script" id=5]
 [ext_resource path="res://Goals/Goal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Goals/Goals.gd" type="Script" id=7]
+[ext_resource path="res://UI/Options.tscn" type="PackedScene" id=8]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -78,5 +79,7 @@ position = Vector2( 160, 160 )
 position = Vector2( 544, 288 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
+
+[node name="Options" parent="." instance=ExtResource( 8 )]
 
 [connection signal="victory" from="Goals" to="." method="_on_Goals_victory"]

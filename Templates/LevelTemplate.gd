@@ -10,3 +10,8 @@ func _ready():
 func _on_Goals_victory():
 	Gamestate.current_level +=1
 	Gamestate.load_level()
+	
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		$Options.popup_centered()
