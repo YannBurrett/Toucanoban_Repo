@@ -1,4 +1,6 @@
 extends "res://Interacatbles/PressurePlate.gd"
+tool
+
 
 func _ready():
 	get_tree().call_group(plate_group, "switch_changed", true)
