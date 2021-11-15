@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Crates/Crate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Obstacle.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( -21, -24, 21, -24, 24, -21, 24, 20, 20, 24, -21, 24, -24, 20, -24, -21 )
+
+[node name="Obstacle" instance=ExtResource( 1 )]
+collision_layer = 1
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="Light2D" parent="." index="7"]
+visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="8"]
+occluder = SubResource( 1 )
